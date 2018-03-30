@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.0;netstandard2.0;MonoAndroid80;Xamarin.iOS10;uap10.0.15063;Xamarin.TVOS10;Xamarin.WatchOS10;Xamarin.Mac20;</TargetFrameworks>
-    <AssemblyName>Plugin.BlobStorageHelper</AssemblyName>
-    <RootNamespace>Plugin.BlobStorageHelper</RootNamespace>
-    <PackageId>Plugin.BlobStorageHelper</PackageId>
+    <AssemblyName>LeoJHarris.XForms.Plugin.BlobStorageHelper</AssemblyName>
+    <RootNamespace>LeoJHarris.XForms.Plugin.BlobStorageHelper</RootNamespace>
+    <PackageId>LeoJHarris.XForms.Plugin.BlobStorageHelper</PackageId>
     
-    <Product>$(AssemblyName) ($(TargetFramework))</Product>
+    <Product>LeoJHarris.XForms.Plugin.BlobStorageHelper</Product>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
     <Version>1.0.0.0</Version>
@@ -21,20 +21,21 @@
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     
     <!--TODO: Fill these in-->
-    <PackageLicenseUrl>LINK TO LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>LINK TO PROJECT</PackageProjectUrl>
-    <RepositoryUrl>LINK TO PROJECT</RepositoryUrl>
-    <PackageReleaseNotes>RELEASE NOTES</PackageReleaseNotes>
-    <PackageIconUrl>ICON URL</PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/LeoJHarris/BlobStorageHelper/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/LeoJHarris/BlobStorageHelper</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/LeoJHarris/BlobStorageHelper</RepositoryUrl>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <PackageIconUrl>https://github.com/LeoJHarris/BlobStorageHelper/blob/master/blob.png</PackageIconUrl>
     <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, BlobStorageHelper</PackageTags>
     
     <Title>BlobStorageHelper Plugin for Xamarin and Windows</Title>
     <Summary>Summary of nuget</Summary>
-    <Description>Plugin Description</Description>
+    <Description>Helper plugin for the azure storage client</Description>
 
     <Owners>YOU</Owners>
-    <Authors>YOU</Authors>
+    <Authors>Leonard Harris</Authors>
     <Copyright>Copyright 2018</Copyright>
+    <Company></Company>
   </PropertyGroup>
 
   <ItemGroup>
