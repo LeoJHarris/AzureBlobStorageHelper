@@ -1,13 +1,14 @@
-﻿using Microsoft.WindowsAzure.Storage;
+﻿using LeoJHarris.XForms.Plugin.BlobStorageHelper;
+using LeoJHarris.XForms.Plugin.BlobStorageHelper.Platforms.iOS;
+using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
-using Plugin.BlobStorageHelper.Platforms.iOS;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Plugin.BlobStorageHelper
+namespace LeoJHarris.XForms.Plugin.BlobStorageHelper
 {
     /// <summary>
     /// Interface for $safeprojectgroupname$

@@ -5,7 +5,7 @@
     <AssemblyName>LeoJHarris.XForms.Plugin.BlobStorageHelper</AssemblyName>
     <RootNamespace>LeoJHarris.XForms.Plugin.BlobStorageHelper</RootNamespace>
     <PackageId>LeoJHarris.XForms.Plugin.BlobStorageHelper</PackageId>
-    
+
     <Product>LeoJHarris.XForms.Plugin.BlobStorageHelper</Product>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
@@ -19,7 +19,7 @@
     <GenerateDocumentationFile Condition=" '$(Configuration)' == 'Release' ">true</GenerateDocumentationFile>
     <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    
+
     <!--TODO: Fill these in-->
     <PackageLicenseUrl>https://github.com/LeoJHarris/BlobStorageHelper/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/LeoJHarris/BlobStorageHelper</PackageProjectUrl>
@@ -27,12 +27,12 @@
     <PackageReleaseNotes>First release</PackageReleaseNotes>
     <PackageIconUrl>https://github.com/LeoJHarris/BlobStorageHelper/blob/master/blob.png</PackageIconUrl>
     <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, BlobStorageHelper</PackageTags>
-    
+
     <Title>BlobStorageHelper Plugin for Xamarin and Windows</Title>
     <Summary>Summary of nuget</Summary>
     <Description>Helper plugin for the azure storage client</Description>
 
-    <Owners>YOU</Owners>
+    <Owners>Leonard Harris</Owners>
     <Authors>Leonard Harris</Authors>
     <Copyright>Copyright 2018</Copyright>
     <Company></Company>
@@ -91,7 +91,7 @@
     <PackageReference Include="Tizen.NET" Version="4.0.0" />
   </ItemGroup>
   -->
-  
+
   <!--
     <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Compile Include="Platforms\DotNet\**\*.cs" />

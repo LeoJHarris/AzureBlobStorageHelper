@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Plugin.BlobStorageHelper.Platforms.iOS
+namespace LeoJHarris.XForms.Plugin.BlobStorageHelper.Platforms.iOS
 {
     internal static class MimeHelper
     {

@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using LeoJHarris.XForms.Plugin.BlobStorageHelper;
+using System;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Plugin.BlobStorageHelper
+namespace LeoJHarris.XForms.Plugin.BlobStorageHelper
 {
     /// <summary>
     /// Interface for $safeprojectgroupname$

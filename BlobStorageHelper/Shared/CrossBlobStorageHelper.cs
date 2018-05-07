@@ -1,13 +1,14 @@
 ﻿using System;
 
-namespace Plugin.BlobStorageHelper
+namespace LeoJHarris.XForms.Plugin.BlobStorageHelper
 {
     /// <summary>
     /// Cross BlobStorageHelper
     /// </summary>
     public static class CrossBlobStorageHelper
     {
-        static Lazy<IBlobStorageHelper> implementation = new Lazy<IBlobStorageHelper>(() => CreateBlobStorageHelper(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
+        static Lazy<IBlobStorageHelper> implementation = new Lazy<IBlobStorageHelper>(() => CreateBlobStorageHelper(),
+        System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
         /// <summary>
         /// Gets if the plugin is supported on the current platform.

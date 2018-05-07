@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Plugin.BlobStorageHelper
+namespace LeoJHarris.XForms.Plugin.BlobStorageHelper
 {
     public interface IBlobStorageHelper
     {

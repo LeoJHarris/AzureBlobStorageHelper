@@ -8,7 +8,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Plugin.BlobStorageHelper
+namespace LeoJHarris.XForms.Plugin.BlobStorageHelper
 {
     /// <summary>
     /// Interface for $safeprojectgroupname$
@@ -26,9 +26,9 @@ namespace Plugin.BlobStorageHelper
         /// </param>
         public string SaveFile(string filename, Stream stream)
         {
-            Java.IO.File something = Android.App.Application.Context.GetExternalFilesDir(Android.OS.Environment.DirectoryPictures);
+            Java.IO.File dir = Android.App.Application.Context.GetExternalFilesDir(Android.OS.Environment.DirectoryPictures);
 
-            string filePath = Path.Combine(something.AbsolutePath, filename);
+            string filePath = Path.Combine(dir.AbsolutePath, filename);
             CopyStream(stream, filePath);
 
             return filePath;
@@ -45,8 +45,6 @@ namespace Plugin.BlobStorageHelper
         /// </returns>
         public byte[] LoadFile(string filename)
         {
-            //Does not handle
-
             Java.IO.File path = Android.App.Application.Context.GetExternalFilesDir(Android.OS.Environment.DirectoryPictures);
 
             string filePath = Path.Combine(path.AbsolutePath, filename);
@@ -126,7 +124,9 @@ namespace Plugin.BlobStorageHelper
 
         public async Task<Uri> UploadBlob(Guid containerName, Guid blobName, string storageConnectionString, Stream stream)
         {
-            if (!string.IsNullOrEmpty(SaveFile(blobName.ToString(), stream)))
+            string filePath = SaveFile(blobName.ToString(), stream);
+
+            if (!string.IsNullOrEmpty(filePath))
             {
                 // Get the file
                 byte[] fileInfo = LoadFile(blobName.ToString("D"));
