@@ -30,7 +30,7 @@
 
     <Title>BlobStorageHelper Plugin for Xamarin and Windows</Title>
     <Summary>Summary of nuget</Summary>
-    <Description>Helper plugin for the azure storage client</Description>
+    <Description>Helper plugin for the azure blob storage container client</Description>
 
     <Owners>Leonard Harris</Owners>
     <Authors>Leonard Harris</Authors>
@@ -40,7 +40,7 @@
 
   <ItemGroup>
     <PackageReference Include="MSBuild.Sdk.Extras" Version="1.2.0" PrivateAssets="All" />
-    <PackageReference Include="WindowsAzure.Storage" Version="9.1.0" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.1.1" />
     <Compile Include="Shared\**\*.cs" />
   </ItemGroup>
 

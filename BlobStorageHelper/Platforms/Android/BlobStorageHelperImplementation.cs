@@ -122,20 +122,28 @@ namespace LeoJHarris.XForms.Plugin.BlobStorageHelper
             }
         }
 
-        public async Task<Uri> UploadBlob(Guid containerName, Guid blobName, string storageConnectionString, Stream stream)
+        /// <summary>
+        /// Uploads the BLOB.
+        /// </summary>
+        /// <param name="containerName">Name of the container.</param>
+        /// <param name="fileName">Name of the file.</param>
+        /// <param name="connectionString">The connection string.</param>
+        /// <param name="stream">The stream.</param>
+        /// <returns></returns>
+        public async Task<Uri> UploadBlob(Guid containerName, Guid fileName, string connectionString, Stream stream)
         {
-            string filePath = SaveFile(blobName.ToString(), stream);
+            string filePath = SaveFile(fileName.ToString(), stream);
 
             if (!string.IsNullOrEmpty(filePath))
             {
                 // Get the file
-                byte[] fileInfo = LoadFile(blobName.ToString("D"));
+                byte[] fileInfo = LoadFile(fileName.ToString("D"));
                 if (fileInfo.Length > 0)
                 {
-                    string newFileName = blobName.ToString("D");
+                    string newFileName = fileName.ToString("D");
 
                     // Get the container
-                    CloudBlobContainer container = await GetContainer(containerName, storageConnectionString).ConfigureAwait(false);
+                    CloudBlobContainer container = await GetContainer(containerName, connectionString).ConfigureAwait(false);
 
                     CloudBlockBlob blob = container.GetBlockBlobReference(newFileName);
 
@@ -214,7 +222,7 @@ namespace LeoJHarris.XForms.Plugin.BlobStorageHelper
                     await blob.FetchAttributesAsync().ConfigureAwait(false);
 
                     string type = null;
-                    var extension = MimeTypeMap.GetFileExtensionFromUrl(blobName.ToString().ToLower());
+                    var extension = MimeTypeMap.GetFileExtensionFromUrl(fileName.ToString().ToLower());
 
                     if (extension != null)
                     {
@@ -222,7 +230,7 @@ namespace LeoJHarris.XForms.Plugin.BlobStorageHelper
                         await blob.SetPropertiesAsync().ConfigureAwait(false);
 
                         // Success!
-                        return GenerateUrl(containerName, blobName, storageConnectionString);
+                        return GenerateUrl(containerName, fileName, connectionString);
                     }
                 }
             }
