@@ -24,13 +24,16 @@ Available on NuGet: https://www.nuget.org/packages/LeoJHarris.XForms.Plugin.Blob
 **Usage**
 
 ```csharp
-Stream stream = await ImageService.Instance.LoadUrl("https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-128.png").AsPNGStreamAsync();
+Stream stream = await ImageService.Instance
+.LoadUrl("https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-128.png")
+.AsPNGStreamAsync();
 ```
 
 `Guid guid = Guid.Parse("FileName");`
 
 ```csharp
-Uri uri = await LeoJHarris.XForms.Plugin.BlobStorageHelper.CrossBlobStorageHelper.Current.UploadBlob("#YOUR CONTAINER NAME ON AZURE#", guid, "#CONNECTION STRING#", stream);
+Uri uri = await LeoJHarris.XForms.Plugin.BlobStorageHelper.CrossBlobStorageHelper.Current
+.UploadBlob("#YOUR CONTAINER NAME ON AZURE#", guid, "#CONNECTION STRING#", stream);
 ```
 
 **License**
