@@ -1,4 +1,4 @@
-**Blob Storage Helper for Xamarin forms**
+**Azure Blob Storage**
 
 Helper library for the client library that enables working with the Microsoft Azure storage services which include the blob and file service for storing binary and text data.
 . Unofficial. 
